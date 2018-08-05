@@ -16,7 +16,7 @@
         header("Location: register.php?error=5");
     }else{
         // db connection
-        $db = new connection();
+        $db = new Connection();
         $con = $db->connectToDataBase();
         $sql = "SELECT * FROM users WHERE email = :email"; // search for same email in the db
         try{

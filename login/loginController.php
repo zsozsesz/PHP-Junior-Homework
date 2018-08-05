@@ -4,7 +4,7 @@
     // setup logger
     $logger = new Katzgrau\KLogger\Logger('../logs');
     // setup db connection
-    $db = new connection();
+    $db = new Connection();
     $con = $db->connectToDataBase();
 
     // Search for email in the db if its doesnt exist return with error message

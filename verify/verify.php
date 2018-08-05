@@ -1,6 +1,6 @@
 <?php 
     include '../dbconfig/db_config.php';
-    $db = new connection();
+    $db = new Connection();
     $con = $db->connectToDataBase(); //db connection
 
     $sql = "SELECT u.email AS email,u.id AS uid, v.hash AS hash FROM users u INNER JOIN verify v ON v.userID =u.id WHERE u.email=:email AND v.hash = :hash";
