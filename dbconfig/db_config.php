@@ -1,6 +1,6 @@
 <?php
 // database connection class
-class connection {
+class Connection {
     // config variables for the connection
     protected $connect;
     private $db_user = 'username';
