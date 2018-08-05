@@ -7,3 +7,4 @@
 # 3. Set the database,user,password,host in dbconfig/db_config.php
 # 4. Set the domain in register/registerController.php
 # 5. Be sure you have the correct emailhost  in you php.ini file.
+# 6. Create the tables in your database with the help of the sql files in database_sql folder (create user table first!!)
