@@ -1,5 +1,7 @@
 <?php
-    session_start();
-    session_destroy(); //destroy the session
-    header("Location: index.php"); 
+    include_once('./services/userService.php');
+    $userService = new UserService();
+    $user = $userService->logout();
+    header("Location: index.php");
+
 ?>

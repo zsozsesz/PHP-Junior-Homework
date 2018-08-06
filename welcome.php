@@ -1,8 +1,10 @@
 <?php
-    session_start();
-    if(isset($_SESSION["name"])){
-        echo '<h1>Welcome '.$_SESSION["name"].'</h1> <br> <a href="logout.php">Logout</a>';
+       include_once('./services/userService.php');
+    $userService = new UserService();
+    if($userService->checkLogin()){
+        $user = $userService->getUser();
+        echo "Welcome ".$user->getName().' <br> </h1><a href="logout.php">Logout</a>';
     }else{
-        header("Location: index.php?error=3"); //redirect to login page if session name is unset
+        header("Location: index.php");
     }
 ?>
